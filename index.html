@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Álbumes!</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/sortTable.js"></script>
+</head>
+
+
+<body style="padding:1%">
+
+  <header><button style="position:absolute; top: 10px; right: 10px; font-size: large; background-color: rgb(54, 92, 109);"> <a href="https://frostedana8.github.io/pajas.cum/">Volver al índice</a></button>
+  </header>
+
+
+
+  <h1>Archivo del hilo de álbumes</h1> 
+
+  <h5><a href="https://twitter.com/turboputa/status/1557514741224017922" target=”_blank”>Ver hilo original en Twitter</a></h5>
+  <p>Esta web es compleja de programar para mis capacidades y aún está en proceso. He de copiar más álbumes y mejorar el aspecto. Ruego paciencia. <br>
+  Ah, sí, Spotify chupa huevo y sus iframes no se pueden cambiar dinámicamente de altura, así que todas las integraciones de Spotify son grandes de más para intentar evitar que hayan tres scrolls a la vez en pantalla (de las malas opciones, la he considerado la menos mala).</p>
+  <h5>Haz click en las cabeceras de las columnas para ordenarlas</h5>
+
+
+
+  
+  
+  
+      
+  <main>
+    
+    
+    <table id="myTable">
+      <tr>
+        <th><p>Imágen</p></th>
+        <th onclick="sortTable(1)"><p>Álbum</p></th>
+        <th onclick="sortTable(2)"><p>Artista</p></th>
+        <th onclick="sortTable(3)"><p>Duración</p></th>
+        <th onclick="sortTable(4)"><p>Fecha de salida (Y/M/D)</p></th>
+        <th onclick="sortTable(5)"><p>Nota (sobre 10)</p></th>
+        <th onclick="sortTable(6)"><p>Fecha de review (Y/M/D)</p></th>
+      </tr>
+      
+      <!-- Aqui se van añadiendo nuevas filas <tr> desde getAlbumes() -->
+
+    </table>
+        
+    <!-- A este div "yokai" (ya que es invisible pero sus efectos se pueden notar) se le añaden los popups que luego se llamarán desde las filas -->
+    <div id="yokai">
+    </div>
+
+
+  </main>
+
+      
+
+
+
+</body>
+</html>
