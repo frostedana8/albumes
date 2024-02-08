@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AlbumCard from '../components/AlbumCard.astro';
+import { createAlbumsObject } from '../services/spotifyData.js';
+import AlbumesJSON from '../data/albumes.json'
+const spotify_data = await createAlbumsObject(import.meta.env.SPOTIFY_CLIENT_ID, import.meta.env.SPOTIFY_SECRET, AlbumesJSON)
+---
+
+<Layout title="Review Álbumes.">
+	<div class="flex items-center justify-center h-screen">
+		<h1 class="text-center text-6xl text-primary">Web de Nana</h1>
+	</div>
+</Layout>

@@ -1,0 +1,33 @@
+---
+import NavBar from '../components/NavBar.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dracula">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content="Review de Álbumes">
+		<meta property="og:site_name" content="web-albumes">
+		<meta property="og:url" content=`${Astro.url}`>
+		<meta property="og:description" content="">
+		<meta property="og:type" content=website>
+		<meta property="og:image" content=`${Astro.url}/card.png`>
+		<title>{title}</title>
+	</head>
+	<body>
+		<NavBar />
+		<slot />
+		<footer class="flex justify-center">
+			<p>Reimplementación de la <a class="text-sky-700 hover:scale-105" href="https://frostedana8.github.io/albumes/">pagina de Reviews de albumes</a> de <a class="text-sky-700 hover:scale-105" href="https://twitter.com/lobotonanner">Nana</a></p>
+		</footer>
+	</body>
+</html>
